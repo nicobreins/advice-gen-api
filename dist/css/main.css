@@ -17,7 +17,7 @@ body {
 
 .card {
   height: auto;
-  width: 25vw;
+  width: 30rem;
   background-color: var(--Grayish-Blue);
   display: flex;
   flex-direction: column;
