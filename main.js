@@ -1,10 +1,15 @@
 const DICE = document.getElementById('dice');
 const ADVICEEL = document.getElementById('advice');
 const ADVICECOUNT = document.getElementById('adv-count');
+const DICEIMG = document.getElementById('dice-img');
 
 
 DICE.onclick = () =>{
     randomAdvice();
+
+    DICEIMG.classList.remove('active');
+    void DICEIMG.offsetWidth;
+    DICEIMG.classList.add('active'); 
 }
 
 const randomAdvice = ()=>{

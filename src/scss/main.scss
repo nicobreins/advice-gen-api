@@ -86,6 +86,27 @@ body{
         &:hover{
             box-shadow: 1px 1px 50px var(--Neon-Green);
         }
+
+        img{
+            transition: all .3s ease-in-out;
+
+            &.active{
+                -webkit-animation-name: cssAnimation;
+                -webkit-animation-duration: .3s;
+                -webkit-animation-iteration-count: 1;
+                -webkit-animation-timing-function: ease;
+                -webkit-animation-fill-mode: forwards;
+            }
+        }
         
     }
 }
+
+@-webkit-keyframes cssAnimation {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(90deg);
+    }
+  }

@@ -77,5 +77,24 @@ body {
 .card .dice:hover {
   box-shadow: 1px 1px 50px var(--Neon-Green);
 }
+.card .dice img {
+  transition: all 0.3s ease-in-out;
+}
+.card .dice img.active {
+  -webkit-animation-name: cssAnimation;
+  -webkit-animation-duration: 0.3s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes cssAnimation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(90deg);
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
