@@ -1,0 +1,81 @@
+html {
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+  --Grayish-Blue: hsl(216, 19%, 29%);
+  --Dark-Grayish-Blue: hsl(218, 19%, 19%);
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  background-color: var(--Dark-Grayish-Blue);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  height: auto;
+  width: 25vw;
+  background-color: var(--Grayish-Blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.75rem;
+  color: #fff;
+  gap: 2rem;
+  padding: 2.5rem;
+  text-align: center;
+  position: relative;
+  box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 480px) {
+  .card {
+    width: 70vw;
+  }
+}
+.card h1 {
+  font-size: 0.75rem;
+  color: var(--Neon-Green);
+  margin: 0;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+}
+.card q {
+  font-size: 1.7rem;
+}
+.card .divider {
+  padding: 1rem 0rem 2rem 0rem;
+  display: block;
+}
+@media (max-width: 480px) {
+  .card .divider {
+    display: none;
+  }
+}
+.card .mob-divider {
+  display: none;
+  padding: 1rem 0rem 2rem 0rem;
+}
+@media (max-width: 480px) {
+  .card .mob-divider {
+    display: block;
+  }
+}
+.card .dice {
+  background-color: var(--Neon-Green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 3rem;
+  position: absolute;
+  bottom: -1.5rem;
+  cursor: pointer;
+}
+.card .dice:hover {
+  box-shadow: 1px 1px 50px var(--Neon-Green);
+}
+
+/*# sourceMappingURL=main.css.map */

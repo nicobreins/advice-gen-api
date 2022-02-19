@@ -1,0 +1,91 @@
+html{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+    
+    --Grayish-Blue: hsl(216, 19%, 29%);
+    --Dark-Grayish-Blue: hsl(218, 19%, 19%);    
+}
+
+@mixin mq($size) {
+    @media (max-width: $size) {
+        @content
+    }
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: var(--Dark-Grayish-Blue);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card{
+    height: auto;
+    width: 25vw;
+    background-color: var(--Grayish-Blue);
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    border-radius: .75rem;
+    color: #fff;
+    gap: 2rem;
+    padding: 2.5rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 10px 10px 40px rgba($color: #000000, $alpha: .2);
+
+    @include mq(480px){
+        width: 70vw;
+    }
+
+    h1{
+        font-size: .75rem;
+        color: var(--Neon-Green);
+        margin: 0;
+        letter-spacing: .2rem;
+        font-weight: 800;
+    }
+
+    q{
+        font-size: 1.7rem;
+    }
+
+    .divider{
+        padding: 1rem 0rem 2rem 0rem;
+        display: block;
+
+        @include mq(480px){
+            display: none;
+        }
+    }
+
+    .mob-divider{
+        display: none;
+        padding: 1rem 0rem 2rem 0rem;
+
+        @include mq(480px){
+            display: block;
+        }
+    }
+
+    .dice{
+        background-color: var(--Neon-Green);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        border-radius: 3rem;
+        position: absolute;
+        bottom: -1.5rem;
+        cursor: pointer;
+
+        &:hover{
+            box-shadow: 1px 1px 50px var(--Neon-Green);
+        }
+        
+    }
+}
